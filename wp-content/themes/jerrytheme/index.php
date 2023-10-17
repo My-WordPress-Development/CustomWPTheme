@@ -16,7 +16,7 @@
      <title>WordPress Custom Theme</title>
 </head>
 <body>
-     <h1>custom theme</h1>
+     <h1>custom themes </h1>
      
 </body>
 </html>

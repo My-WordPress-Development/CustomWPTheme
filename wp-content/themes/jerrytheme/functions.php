@@ -44,3 +44,35 @@ function jerrytheme_register_scripts(){
 }
 
 add_action('wp_enqueue_scripts', 'jerrytheme_register_scripts');
+
+function jerrytheme_widget_areas(){
+
+     register_sidebar(
+          array(
+               'name' => 'Sidebar Areas',
+               'id' => 'sidebar-1',
+               'description' => 'Sidebar Widget Area',
+               'before_widget' => '',
+               'after_widget' => '',
+               'before_title' => '',
+               'after_title' => '',
+          )
+          
+     );
+
+     register_sidebar(
+          array(
+               'name' => 'Footer Areas',
+               'id' => 'footer-1',
+               'description' => 'Footer Widget Area',
+               'before_widget' => '',
+               'after_widget' => '',
+               'before_title' => '',
+               'after_title' => '',
+          )
+          
+     );
+}
+
+add_action('widgets_init', 'jerrytheme_widget_areas');
+

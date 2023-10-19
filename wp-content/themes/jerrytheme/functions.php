@@ -1,6 +1,28 @@
 <?php
 
-function my_theme_register_styles(){
+function jerrytheme_theme_support(){
+     // Add dynamic title tag
+     add_theme_support('title-tag');
+     add_theme_support('custom-logo');
+     add_theme_support('post-thumbnails');
+     
+}
+
+add_action('after_setup_theme', 'jerrytheme_theme_support');
+
+function jerrytheme_nav_menu(){
+     $locations = array(
+          'primary' => 'Desktop Primary Left Menu',
+          'footer' => 'Footer Menu Item'
+     );
+
+     register_nav_menus($locations);
+}
+
+add_action('init', 'jerrytheme_nav_menu');
+
+
+function jerrytheme_register_styles(){
 
      $version = wp_get_theme()->get('Version');
      wp_enqueue_style('main-style', get_template_directory_uri(). '/style.css', array('bootstrap'), $version, 'all' );
@@ -8,9 +30,9 @@ function my_theme_register_styles(){
      wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css', array(), '5.13.0', 'all' );
 }
 
-add_action('wp_enqueue_scripts', 'my_theme_register_styles');
+add_action('wp_enqueue_scripts', 'jerrytheme_register_styles');
 
-function my_theme_register_scripts(){
+function jerrytheme_register_scripts(){
 
      // $version = wp_get_theme()->get('Version');
      // wp_enqueue_style('main-style', get_template_directory_uri(). '/style.css', array('bootstrap'), $version, 'all' );
@@ -21,4 +43,4 @@ function my_theme_register_scripts(){
      wp_enqueue_script('main-js', get_template_directory_uri(). '/assets/js/main.js', array(), '1.0', true );
 }
 
-add_action('wp_enqueue_scripts', 'my_theme_register_scripts');
+add_action('wp_enqueue_scripts', 'jerrytheme_register_scripts');

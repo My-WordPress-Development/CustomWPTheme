@@ -1,0 +1,191 @@
+<style type="text/css">
+     #css_text_container {
+         background-color: #3d6e86;
+         padding: 32px;
+     }
+ 
+     #css_text_container p {
+         color: #fff;
+         font-size: 16px;
+         text-align: center;
+         margin: 0;
+     }
+ </style>
+ 
+<div id="css_text_container">
+     <p>
+          CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
+          This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content.
+     </p>
+</div>
+ ===========
+
+
+ <div id="main">
+     <h1>"Hello, World!" program</h1>
+     <p id="ptxt-light">
+         A "Hello, World!" program is a computer program that outputs or displays
+         "Hello, World!" to a user. Being a very simple program in most programming languages,
+         it is often used to illustrate the basic syntax of a programming language for a working
+         program, and as such is often the very first program people write.
+     </p>
+     <h2>Purpose</h2>
+     <p id="ptxt-light">
+         A "Hello, World!" program is traditionally used to introduce novice programmers to a
+         programming language. "Hello, world!" is also traditionally used in a sanity test
+         to make sure that a computer language is correctly installed, and that the operator
+         understands how to use it.
+     </p>
+     <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">Read More</a>
+ </div>
+ 
+
+ ========
+
+Who Can View: Users such as administrators
+Who Cannot View: Users such as subscribers or authors.
+
+====
+
+function replace_hello_into_good_day($content) {
+
+     $current_time = current_time('H:i');
+ 
+     $start_time = '11:00';
+ 
+     if (strtotime($current_time) < strtotime($start_time)) {
+         $content = str_replace('Hello', 'Good Day', $content);
+     }
+ 
+     return $content;
+ }
+ 
+ add_filter('the_content', 'replace_hello_into_good_day');
+ 
+ ==========
+
+<?php
+function perform_database_action($value1, $value2, $value3) {
+    global $wpdb;
+
+    // The 'table_name' is the actual/same name of your db table
+    $table_name = $wpdb->prefix . 'your_table_name';
+
+    // Prepare data for insertion
+    $data = array(
+        'col1' => $value1,
+        'col2' => $value2,
+        'col3' => $value3
+    );
+
+    // Insert data into the database
+    $wpdb->insert($table_name, $data);
+
+    // Check for errors
+    if ($wpdb->last_error) {
+        return false; // Handle the error 
+    }
+
+    return true; // Save successfully
+}
+
+=====
+
+This would improve accessibility and help search engines understand the structure of your page better. Example:
+<footer>
+     <p>All rights reserved</p>
+ </footer>
+
+
+ ============
+
+ To prevent brute force login attempts in WordPress, you can implement several security measures and plugins. Here are some effective methods:
+
+ 1.Strong Password Policies
+ 2.Limit Login Attempt
+ 3.Two-Factor Authentication
+ 4.Use Unique Admin Usernam
+ 5.Change Default Login URL
+ 6.Web Application Firewall
+ 7.Login Whitelisting
+ 8.Monitoring and Alert
+ 9.Captcha
+ 10.Password Lockout Duration
+ 11.Regular Update
+ 12.Security Plugin
+ 13..htaccess Rule
+ 14.Server-Level Protection
+ 
+
+
+==================
+
+
+<?php
+$url = 'http://yourdomain.com/blog/wp-json/wp/v2/posts?per_page=5'; // Adjust the URL to match your WordPress site
+
+$response = file_get_contents($url);
+
+if ($response === false) {
+    // Handle errors
+    echo 'Unable to fetch posts.';
+} else {
+    $posts = json_decode($response);
+
+    if (!empty($posts)) {
+        echo '<ul>';
+        foreach ($posts as $post) {
+            echo '<li><a href="' . esc_url($post->link) . '">' . esc_html($post->title->rendered) . '</a></li>';
+        }
+        echo '</ul>';
+    } else {
+        echo 'No posts found.';
+    }
+}
+?>
+
+=========
+The main difference is <span> is an inline element primarily used for styling text or elements within text, <div> is a block element used for grouping and structuring content into larger sections or blocks, often for layout purposes.
+
+     =====
+
+transition-property
+transition-duration
+transition-timing-function
+transition-delay
+
+====
+
+
+"==" 
+It compares the values on both sides for equality after type coercion.
+
+"===" 
+It compares both the values and their data types without type coercion.
+
+
+========
+
+"display: none" completely removes the element from the layout, making it invisible and not occupy any space.
+"visibility: hidden" hides the element but keeps it in the layout, preserving its space.
+
+========
+
+"Cookies" are suitable for small, frequently used data, both for session and persistent storage.
+"sessionStorage" is used for temporary data storage within a single page session.
+"localStorage" is used for storing data that should persist across browser sessions and is accessible across tabs and windows from the same domain.
+
+====
+
+Reset CSS: Choose a CSS reset if you want complete control over styling and prefer to start from a clean slate. This approach can be beneficial when you want to create a highly customized design without any assumptions about default styles.
+
+Normalize CSS: Choose CSS normalization if you want a more consistent and predictable starting point that retains some of the default styling. It's especially useful when you want to maintain a balance between a consistent user experience across browsers and the flexibility to define your styles.
+
+The choice depends on your project's requirements and your design preferences. If you prefer to control every aspect of styling and don't want any assumptions about default styles, go for a reset. If you want a more consistent baseline to work from and are comfortable with some default styles, normalization is a good choice. Additionally, some projects may use a combination of both techniques, depending on specific needs.
+
+=====
+
+Use CSS Reset or Normalize
+Cross-browser Testing
+Flexbox and Grid Layout
+Regular Updates

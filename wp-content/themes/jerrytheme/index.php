@@ -7,7 +7,6 @@
 
 ?>
   
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +15,8 @@
      <title>WordPress Custom Theme</title>
 </head>
 <body>
-     <h1>custom theme</h1>
+     testasdas
+     
      
 </body>
 </html>

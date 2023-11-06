@@ -4,8 +4,9 @@ function my_theme_register_styles(){
 
      $version = wp_get_theme()->get('Version');     
      // Main and Custom Stylesheet
-     wp_enqueue_style( 'main-style', get_template_directory_uri() . '/style.css', array(), $version, 'all' );
-     wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/assets/css/custom-style.css', array(), $version, 'all' );
+     wp_enqueue_style( 'main-style', get_template_directory_uri() . '/style.css', array('bootstrap'), $version, 'all' );
+     // wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/assets/css/custom-style.css', array(), $version, 'all' );
+     
      // Bootstrap
      wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', array(), '5.3.2', 'all' );
      

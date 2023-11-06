@@ -1,10 +1,7 @@
 <?php get_header(); ?>
 
 <div class="container">
-     index test
-     <div class="jumbotron">
-          <button class="btn btn-primary">Save</button>
-     </div>
+    index
 </div>
 
 <?php get_footer(); ?>

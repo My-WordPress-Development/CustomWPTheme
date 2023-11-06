@@ -15,8 +15,6 @@
      <title>WordPress Custom Theme</title>
 </head>
 <body>
-     tetst
-     
      
 </body>
 </html>

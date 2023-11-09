@@ -9,9 +9,16 @@
 </head>
 <body>
      <header class="header">
-          <nav>
-               nav
-          </nav>
+          <div class="container">
+               <?php 
+                    wp_nav_menu( 
+                         array( 
+                              'theme_location' => 'custom-header-menu', 
+                              'menu_class' => 'custom-header-menu' 
+                         ), 
+                    ); 
+               ?>
+          </div>
      </header>
 
 

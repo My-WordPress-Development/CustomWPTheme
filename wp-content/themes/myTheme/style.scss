@@ -1,9 +1,67 @@
-$primary: orange;
+// Global Header Menu Links Text Color
+$headerlinks: #fff;
+$headerlinkssubmenu: #000;
 
+header{
+     background: #111;
+     height: 100px;
+     width: 100%;
+}
 
-.header{
-     background: $primary;
-     nav{
-          color: red;
+.page-wrapper{
+     padding: 2rem 0;
+}
+
+header{
+     .container{
+          align-items: center;
+          display: flex;
+          height: 100%;
+          justify-content: center;
+     }
+     .custom-header-menu{
+          display: flex;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li{
+               position: relative;
+          }
+          li .sub-menu{
+               background: #fff;
+               border-radius: 5px;
+               box-shadow: 11px 1px 10px rgba(0,0,0,.5);
+               display: none;
+               left: 0;
+               list-style: none;
+               position: absolute;
+               top: 30px;
+               text-align: center;
+               width: 150px;
+               padding: 1rem;
+               
+               a{
+                    color: $headerlinkssubmenu;
+                    text-decoration-line: none;
+               }
+               a:hover{
+                    color: blue;
+               }
+               
+          }
+          .menu-item-has-children:hover .sub-menu{
+               display: block;
+          }
+     }
+     .custom-header-menu li a{
+          padding: 2rem 1rem;
+          color: $headerlinks;
+          text-decoration-line: none;
+     }
+     .custom-header-menu li:first-child a{
+          padding-left: 0;
+     }
+     .custom-header-menu li:last-child a{
+          padding-right: 0;
      }
 }

@@ -25,6 +25,7 @@ header{
           margin: 0;
           padding: 0;
           li{
+               list-style: none;
                position: relative;
           }
           li .sub-menu{
@@ -44,9 +45,7 @@ header{
                     color: $headerlinkssubmenu;
                     text-decoration-line: none;
                }
-               a:hover{
-                    color: blue;
-               }
+              
                
           }
           .menu-item-has-children:hover .sub-menu{

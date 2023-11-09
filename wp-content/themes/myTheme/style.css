@@ -21,6 +21,7 @@ header .custom-header-menu {
   padding: 0;
 }
 header .custom-header-menu li {
+  list-style: none;
   position: relative;
 }
 header .custom-header-menu li .sub-menu {
@@ -39,9 +40,6 @@ header .custom-header-menu li .sub-menu {
 header .custom-header-menu li .sub-menu a {
   color: #000;
   text-decoration-line: none;
-}
-header .custom-header-menu li .sub-menu a:hover {
-  color: blue;
 }
 header .custom-header-menu .menu-item-has-children:hover .sub-menu {
   display: block;

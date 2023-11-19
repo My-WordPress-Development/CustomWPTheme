@@ -15,6 +15,7 @@ function jerrytheme_nav_menu(){
           'primary' => 'Desktop Primary Left Menu',
           'footer' => 'Footer Menu Item'
      );
+     -
 
      register_nav_menus($locations);
 }
